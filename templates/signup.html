@@ -16,19 +16,28 @@
             <br>
             <br>
            <h3 class="text-white bg-dark text-center p-3 "> Signup Here</h3>
+
+           {% for message in messages %}
+           <div class="alert alert-{{message.tags }} alert-dismissible fade show" role="alert">
+            <strong>{{message}}</strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor%} 
+
             <div class="card p-2" id="myform">
                 <div class="form-group">
                     <form action="" method="post">  {% csrf_token %}
                     <h3><span><i class="bx bx-envelope"></i> Email</span></h3>
-                    <input type="text" class="form-control mb-3">
+
+                    <input type="text" class="form-control mb-3" name="email" required/>
                 </div>
                 <div class="form-group">
                     <h3><span><i class="fas fa-key"></i> Password</span></h3>
-                    <input type="text" class="form-control mb-3">
+                    <input type="password" class="form-control mb-3" name="pass1" required/>
                 </div>
                 <div class="form-group">
                     <h3><span><i class="fas fa-lock"></i>Confirm Password</span></h3>
-                    <input type="text" class="form-control mb-3"> 
+                    <input type="password" class="form-control mb-3" name="pass2" required/> 
                 </div>
                 <div class="d-grid gap-2">
                     <button class="btn btn-dark" type="submit">SignUp</button>
