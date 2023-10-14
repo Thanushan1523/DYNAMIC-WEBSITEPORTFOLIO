@@ -26,6 +26,16 @@ def signup(request):
     return render(request ,'signup.html')
 
 def handlelogin(request):
+    if request.method=="POST":
+        get_email=request.POST.get("email")
+        get_password =request.POST.get("pass1")
+        myuser=authenticate(username=get_email, password=get_password)
+        if myuser is not None:
+            login(request,myuser)
+            messages.success(request,"Login Sucess")
+            return redirect('/')
+        else:
+            messages.error(request,"Invalid Creadintial")
     return render(request ,'login.html')
 
 def handlelogout(request):

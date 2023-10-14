@@ -24,13 +24,13 @@
             {% endfor%}
            <div class="card p-2" id="myform">
                 <div class="form-group">
-                    <form action="" method="post">  {% csrf_token %}
+                    <form action="/auth/login/" method="post">  {% csrf_token %}
                     <h3><span><i class="bx bx-envelope"></i> Email</span></h3>
-                    <input type="text" class="form-control mb-3">
+                    <input type="email" class="form-control mb-3" name="email" required >
                 </div>
                 <div class="form-group">
                     <h3><span><i class="fas fa-key"></i> Password</span></h3>
-                    <input type="text" class="form-control mb-3">
+                    <input type="password" class="form-control mb-3" name="pass1" required>
                 </div>
                 
                 
