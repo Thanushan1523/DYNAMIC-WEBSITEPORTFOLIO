@@ -1,9 +1,16 @@
 from django.shortcuts import render ,redirect
 from django.contrib import messages
-from portfolio.models import Contact
+from portfolio.models import Contact,Blogs
 # Create your views here.
 def home(request):
     return render(request ,'home.html')
+
+
+def handleblog(request):
+    posts=Blogs.objects.all()
+    contex={"posts":posts}
+    return render(request ,'handleblog.html',contex)
+
 
 def about(request):
     return render(request ,'about.html')
