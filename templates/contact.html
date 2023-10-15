@@ -21,9 +21,9 @@
             <strong>{{message}}</strong> 
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
-            {% endfor%}
+            {% endfor %}
            <div class="card p-2" id="myform">
-            <form action="/auth/login/" method="post">  {% csrf_token %}
+            <form action="/contact" method="post">  {% csrf_token %}
                 <div class="form-group">
                     <h3><span><i class="fas fa-user"></i> name</span></h3>
                     <input type="text" class="form-control mb-3" name="name" required >
@@ -31,7 +31,7 @@
 
                 <div class="form-group">
                   <h3><span><i class="bx bx-envelope"></i>Email </span></h3>
-                  <input type="email" class="form-control mb-3" name="email" required >
+                  <input type="email" value="{{user.email}}"class="form-control mb-3" name="email" required >
               </div>
               <div class="form-group">
                 
