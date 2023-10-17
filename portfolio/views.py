@@ -15,6 +15,9 @@ def handleblog(request):
 def about(request):
     return render(request ,'about.html')
 
+def internshipdetails(request):
+    return render(request ,'internshipdetails.html')
+
 def contact(request):
     if request.method=="POST":
         fname=request.POST.get("name")
