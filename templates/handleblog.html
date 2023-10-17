@@ -3,11 +3,11 @@
 {% block title %} Blog{% endblock title %}
 
 {% block style %}
-{%load static %}
+
 
 {% endblock style %}
 {% block body %}
-    
+{%load static %}
 
 <section id="services" class="services">
     <div class="container">
@@ -18,11 +18,13 @@
       </div>
 
       <div class="row">
-        {%for post in posts %}
+        {%for post in posts reversed %}
         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="col-lg-4" data-aos="fade-right">
-                <img src="{{post.img.url}}" class="img-fluid" alt="no-image">
-              </div>
+                <img src="{{post.img.urls}}" class="img-fluid" alt="no-image">
+            </div>
+            <br>
+            
           <div class="icon"><i class="bi bi-briefcase"></i></div>
           <h4 class="title"><a href="">{{post.tittle}}</a></h4>
           <p class="description">{{post.description}}</p>

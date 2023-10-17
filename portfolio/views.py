@@ -8,8 +8,8 @@ def home(request):
 
 def handleblog(request):
     posts=Blogs.objects.all()
-    contex={"posts":posts}
-    return render(request ,'handleblog.html',contex)
+    context={"posts":posts}
+    return render(request ,'handleblog.html',context)
 
 
 def about(request):
