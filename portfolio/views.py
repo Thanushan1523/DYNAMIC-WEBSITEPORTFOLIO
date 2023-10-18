@@ -37,10 +37,18 @@ def internshipdetails(request):
         fproject=fproject.upper()
         foffer=foffer.upper()
 
+
+        check1=Internship.objects.filter(usn=fusn)
+        check2=Internship.objects.filter(email=femail)
+
+        if check1 or check2:
+            messages.warning(request,"your details are stored already")
+            return redirect ('/internshipdetails')
+
         query=Internship(fullname=fname,usn=fusn, collage_name=fcollege,offer_status=foffer,start_date=fstartdate,end_date=fenddate,proj_report=fproject ,email=femail)
         query.save()
         messages.success(request, 'form is submitted')
-        return redirect ('/internship')
+        return redirect ('/internshipdetails')
     return render(request ,'internshipdetails.html')
 
 def contact(request):
