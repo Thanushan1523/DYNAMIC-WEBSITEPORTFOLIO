@@ -15,7 +15,7 @@ class Blogs(models.Model):
     tittle=models.CharField(max_length=60)
     description=models.TextField()
     authname=models.CharField(max_length=15)
-    img=models.FileField(upload_to='blog',blank=True,null=True)
+    img=models.ImageField( upload_to='blog',blank=True,null=True, height_field=None, width_field=None, max_length=None)
     timeStamp=models.DateTimeField(auto_now_add=True,blank=True)
 
     def __str__(self) :
