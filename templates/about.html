@@ -1,6 +1,13 @@
 {% extends 'basic.html' %}
+{% load static %}
 
-{% block title %} About {% endblock title %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>{% block title %} About {% endblock title %}</title>
+</head>
+
+
 
 {% block body %}
 <section id="about" class="about">
@@ -18,28 +25,18 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th>Skills</th>
-              <th>Technologies</th>
+                <th>Category</th>
+                <th>Skills</th>
             </tr>
-          </thead>
-          <tbody>
+        </thead>
+        <tbody>
+            {% for skill in skills %}
             <tr>
-              <td>Programming Languages</td>
-              <td>Python, JavaScript</td>
+                <td>{{ skill.category }}</td>
+                <td>{{ skill.name }}</td>
             </tr>
-            <tr>
-              <td>Web Technologies/Frameworks</td>
-              <td>HTML, CSS, Bootstrap, Django, React</td>
-            </tr>
-            <tr>
-              <td>Tools & Practices</td>
-              <td>Github, Jira, Agile</td>
-            </tr>
-            <tr>
-              <td>Soft Skills</td>
-              <td>Leadership, Teamwork, Resource Optimization, Relationship Management</td>
-            </tr>
-          </tbody>
+            {% endfor %}
+        </tbody>
         </table>
       </div>
     </div>

@@ -1,6 +1,6 @@
 from django.shortcuts import render ,redirect
 from django.contrib import messages
-from portfolio.models import Contact,Blogs,Internship
+from portfolio.models import Contact,Blogs,Internship,Skill,Experience
 # Create your views here.
 def home(request):
     return render(request ,'home.html')
@@ -13,7 +13,12 @@ def handleblog(request):
 
 
 def about(request):
-    return render(request ,'about.html')
+    skills = Skill.objects.all()
+    experiences = Experience.objects.all()
+    
+    return render(request ,'about.html', {'skills': skills, 'experiences': experiences})
+
+
 
 def internshipdetails(request):
     if not request.user.is_authenticated:
