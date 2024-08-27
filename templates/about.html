@@ -2,27 +2,61 @@
 {% load static %}
 
 <head>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
   <title>{% block title %} About {% endblock title %}</title>
 </head>
 
 
 
 {% block body %}
-<section id="about" class="about">
-  <div class="container">
+ 
+  
+<section id="about"  >
+  <!-- <div class="container"> -->
     <div>
       <h2>About</h2>
       <hr class="border border-danger border-2 opacity-50">
       <p>Dynamic and highly motivated professional with a strong background in project management and a passion for coding. Seeking to transition into a career as a developer, leveraging my experience in project coordination, process improvement. Possessing a strong work ethic and a desire to learn new technologies and programming languages, I am eager to contribute to a team environment and collaborate on software development projects. Skilled in HTML, CSS, JavaScript, and Python software design principles</p>
     </div>
-
     <div class="mt-5">
       <h2>SKILLS SUMMARY</h2>
       <hr class="border border-danger border-2 opacity-50 mt-1 mb-1">
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-striped ">
+          <thead>
+            <tr >
+              <th style="background-color: #c7630c; color: white;">Skills</th>
+              <th style="background-color: #f116d7; color: white;">Technologies</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Programming Languages</td>
+              <td>Python, JavaScript</td>
+            </tr>
+            <tr>
+              <td>Web Technologies/Frameworks</td>
+              <td>HTML, CSS, Bootstrap, Django, React</td>
+            </tr>
+            <tr>
+              <td>Tools & Practices</td>
+              <td>Github, Jira, Agile</td>
+            </tr>
+            <tr>
+              <td>Soft Skills</td>
+              <td>Leadership, Teamwork, Resource Optimization, Relationship Management</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <h2>PROJECTS & LEARNINGS</h2>
+      <hr class="border border-danger border-2 opacity-50 mt-1 mb-1">
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
           <thead>
             <tr>
                 <th>Category</th>
@@ -41,19 +75,21 @@
       </div>
     </div>
 
-    <div class="mt-5">
-      <h2>PROJECTS & LEARNINGS</h2>
-      <ul class="list-group">
-        <li class="list-group-item">ToDolist - Python, CSS & Django</li>
-        <li class="list-group-item">Portfolio – Python, CSS, Bootstrap & Django</li>
-        <li class="list-group-item">My first React.js App with MOSH - JavaScript, CSS & React.js</li>
-      </ul>
-    </div>
-
-    <div class="mt-5">
+   
+    <div class="mt-5" >
       <h2>PROFESSIONAL EXPERIENCE</h2>
+      <!-- NEED TO WORK ON HOW TO GET RESPONSIBILITES IN DIFFERENT LINES FROM ADMIN -->
+      <!-- <section id="experience" class="section">
+        <h2>Professional Experience</h2>
+        {% for experience in experiences %}
+        <div class="experience">
+            <h3>{{ experience.job_title }} | {{ experience.company }} – {{ experience.location }} | {{ experience.start_date }} – {{ experience.end_date }}</h3>
+            <p>{{ experience.responsibilities }}</p>
+        </div>
+        {% endfor %}
+    </section> -->
 
-      <div class="card mt-3">
+      <!-- <div class="card mt-3"> -->
         <div class="card-body">
           <h5 class="card-title">Math & Chemistry Tutor | RG Education Centers – Scarborough, ON | Jan 2023 – Present</h5>
           <ul>
@@ -100,4 +136,5 @@
     </div>
   </div>
 </section>
+
 {% endblock body %}

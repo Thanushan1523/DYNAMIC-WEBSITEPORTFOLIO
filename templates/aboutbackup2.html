@@ -1,0 +1,113 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+<head>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>{% block title %} About {% endblock title %}</title>
+</head>
+
+
+
+{% block body %}
+<section id="about" class="about">
+  <div class="container">
+    <div>
+      <h2>About</h2>
+      <hr class="border border-danger border-2 opacity-50">
+      <p>Dynamic and highly motivated professional with a strong background in project management and a passion for coding. Seeking to transition into a career as a developer, leveraging my experience in project coordination, process improvement. Possessing a strong work ethic and a desire to learn new technologies and programming languages, I am eager to contribute to a team environment and collaborate on software development projects. Skilled in HTML, CSS, JavaScript, and Python software design principles</p>
+    </div>
+
+    <div class="mt-5">
+      <h2>SKILLS SUMMARY</h2>
+      <hr class="border border-danger border-2 opacity-50 mt-1 mb-1">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Skills</th>
+              <th>Technologies</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Programming Languages</td>
+              <td>Python, JavaScript</td>
+            </tr>
+            <tr>
+              <td>Web Technologies/Frameworks</td>
+              <td>HTML, CSS, Bootstrap, Django, React</td>
+            </tr>
+            <tr>
+              <td>Tools & Practices</td>
+              <td>Github, Jira, Agile</td>
+            </tr>
+            <tr>
+              <td>Soft Skills</td>
+              <td>Leadership, Teamwork, Resource Optimization, Relationship Management</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <h2>PROJECTS & LEARNINGS</h2>
+      <ul class="list-group">
+        <li class="list-group-item">ToDolist - Python, CSS & Django</li>
+        <li class="list-group-item">Portfolio – Python, CSS, Bootstrap & Django</li>
+        <li class="list-group-item">My first React.js App with MOSH - JavaScript, CSS & React.js</li>
+      </ul>
+    </div>
+
+    <div class="mt-5">
+      <h2>PROFESSIONAL EXPERIENCE</h2>
+
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title">Math & Chemistry Tutor | RG Education Centers – Scarborough, ON | Jan 2023 – Present</h5>
+          <ul>
+            <li>Assessed student's current understanding of mathematics and developed personalized teaching plans.</li>
+            <li>Provided feedback and guidance to students to enhance their understanding of mathematical concepts.</li>
+            <li>Monitored student progress and adjusted teaching techniques as necessary.</li>
+            <li>Maintained accurate records of student progress and feedback.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title">Computer Technician | [Company Name] – [Location] | Jan 2023 – Present</h5>
+          <ul>
+            <li>Setup hardware and installed software as per customer requirements.</li>
+            <li>Documented and recorded relevant information.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title">Pharmacy Assistant (Volunteer) | Denison Discount Pharmacy – Markham, ON | Apr 2021 – Present</h5>
+          <!-- Add details of the experience as needed -->
+        </div>
+      </div>
+
+
+
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title">Nutrition Advisor| Nestlé  – SriLanka | Oct-2017 – Mar-2021</h5>
+          <ul>
+            <li>Developing the sales by demand generation of infant nutrition products in given territory while managing the internal and external stake holders </li>
+            <li> Communicate with Health Care Professionals to provide accurate, scientific & factual information about Nestlé Nutrition Products including the features, benefits and appropriate use</li>
+            <li>Monitored student progress and adjusted teaching techniques as necessary.</li>
+            <li>Maintained accurate records of student progress and feedback.</li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+{% endblock body %}
